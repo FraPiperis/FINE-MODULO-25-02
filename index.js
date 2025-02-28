@@ -65,6 +65,8 @@ function creacard({name, description, brand, imageUrl, price}) {
     PaginaProdotto.setAttribute("href", PaginaProdotto.html)
     Card.appendChild(PaginaProdotto); 
 
+    //GUARDARE LEZIONE SPOTIFY 
+
     Card.style.border = "border-warning"
 
     //card text-bg-dark mb-3
