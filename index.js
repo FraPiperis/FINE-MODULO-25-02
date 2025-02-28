@@ -59,32 +59,6 @@ function creacard({name, description, brand, imageUrl, price}) {
     CardBrand.innerText = brand; 
     Card.appendChild(CardBrand); 
 
-    const CardBottone = document.createElement("div")
-    CardBottone.classList.add("card-body")
-    Card.appendChild(CardBottone); 
-
-    const CardBottone = document.createElement("div")
-    CardBottone.classList.add("card-body")
-    Card.appendChild(CardBottone); 
-
-    const Carrello = document.createElement("button")
-    Carrello.classList.add("btn", "btn-success")
-    Carrello.innerText = "Aggiungi al carrello"
-    CardBottone.appendChild(Carrello)
-   
-    const CardHide = document.createElement("button")
-    CardHide.classList.add("btn", "btn-warning")
-    CardHide.innerText = "Hide"
-    CardBottone.appendChild(CardHide); 
-
-    Carrello.addEventListener("click", () =>{
-        cart.push({img, title, category, price})
-        console.log("Libro aggiunto al carrello:", cart)
-        
-        Card.style.border = "2px solid red"
-
-        CarrelloUp()
-        })
     
     Card.style.border = "border-warning"
 
@@ -92,14 +66,5 @@ function creacard({name, description, brand, imageUrl, price}) {
 
     return Card; 
 }
-
-function CarrelloUp(){
-    const cartContainer = getElementById("Carrello")
-    cartContainer.innerHTML = ""
-
-   
-}
-
-dati(); 
 
 prodotti(); 
