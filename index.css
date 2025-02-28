@@ -1,8 +1,14 @@
 nav .container-fluid img {
-    width: 7%; 
+    width: 5rem; 
     border-radius: 50%;
     box-shadow: 20px;
   }
+.navbar-brand{
+     color: #ebd79b79;
+  }
+nav a {
+  color: #ebd79b79;
+}
 body {
     background-color: #ebd79b79;
   }
