@@ -49,17 +49,22 @@ function creacard({name, description, brand, imageUrl, price}) {
     CardDescription.innerText = description; 
     Card.appendChild(CardDescription); 
 
-    const CardPrice = document.createElement("h5")
-    CardPrice.classList.add("card-text")
-    CardPrice.innerText = "€ " + price; 
-    Card.appendChild(CardPrice); 
-
     const CardBrand = document.createElement("h5")
     CardBrand.classList.add("card-text")
     CardBrand.innerText = brand; 
     Card.appendChild(CardBrand); 
 
-    
+    const CardPrice = document.createElement("h5")
+    CardPrice.classList.add("card-text", "mb-4")
+    CardPrice.innerText = "€ " + price; 
+    Card.appendChild(CardPrice); 
+
+    const PaginaProdotto = document.createElement("a")
+    PaginaProdotto.classList.add("btn", "btn-outline-warning", "mb-4")
+    PaginaProdotto.innerText = "Dettaglio prodotto"
+    PaginaProdotto.setAttribute("href", PaginaProdotto.html)
+    Card.appendChild(PaginaProdotto); 
+
     Card.style.border = "border-warning"
 
     //card text-bg-dark mb-3
