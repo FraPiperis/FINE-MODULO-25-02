@@ -26,7 +26,7 @@ function RenderProd({name, description, imageUrl, price}) {
     const ProductBox = document.getElementById('ProductBox');
 
     const card = document.createElement("div")
-    card.classList.add("card", "bg-transparent", "border-0", "m-5", "p-5")
+    card.classList.add("card", "bg-transparent", "border-0", "m-0", "p-3")
 
     const cardImg = document.createElement("img")
     cardImg.classList.add("img-fluid","p-5", "m-0")

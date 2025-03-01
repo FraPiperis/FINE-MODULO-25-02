@@ -45,9 +45,14 @@ function NuovaRiga({name, description, brand, price}){
      RigaUtente.appendChild(priceUs); 
 
      const deleteButton = document.createElement("btn")
-     deleteButton.classList.add(); 
-     deleteButton.innerText = "DELETE"; 
+     deleteButton.classList.add("btn", "btn-warning", "m-3"); 
+     deleteButton.innerText = "Cancella prodotto"; 
      RigaUtente.appendChild(deleteButton); 
+
+     const EditButton = document.createElement("btn")
+     EditButton.classList.add("btn", "btn-warning"); 
+     EditButton.innerText = "Modifica prodotto"; 
+     RigaUtente.appendChild(EditButton); 
 
 
      return RigaUtente;
