@@ -44,3 +44,24 @@ async function createPost() {
         console.log("Devi inserire tutti e 3 i campi obbligatori!");
     }
 }
+
+
+//////////////////////////////////////////////////////
+//DELETE 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleziona tutti i bottoni "Delete"
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+    // Aggiungi un event listener a ciascun tasto "Delete"
+    deleteButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            // Trova la riga della tabella che contiene il tasto
+            const row = this.closest("tr");
+            
+            // Rimuovi la riga dalla tabella
+            row.remove();
+        });
+    });
+});
