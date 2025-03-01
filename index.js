@@ -26,7 +26,7 @@ function RenderProducts(products) {
     risultato.append(...Cards); 
 }
 
-function creacard({name, description, brand, imageUrl, price}) {
+function creacard({name, description, brand, imageUrl, price, _id}) {
     const Card = document.createElement("div")
     Card.classList.add("card", "col-6", "col-md-4", "col-lg-3", "mb-3", "text-bg-dark", "mt-5"); 
 
@@ -62,7 +62,7 @@ function creacard({name, description, brand, imageUrl, price}) {
     const PaginaProdotto = document.createElement("a")
     PaginaProdotto.classList.add("btn", "btn-outline-warning", "mb-4")
     PaginaProdotto.innerText = "Dettaglio prodotto"
-    PaginaProdotto.setAttribute("href", PaginaProdotto.html)
+    PaginaProdotto.setAttribute('href', `PaginaProdotto.html?q=${_id}`)
     Card.appendChild(PaginaProdotto); 
 
     //GUARDARE LEZIONE SPOTIFY 
