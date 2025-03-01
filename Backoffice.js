@@ -1,3 +1,4 @@
+const linkAPI = 'https://striveschool-api.herokuapp.com/api/product/'
 
 const tab = async() => {
     try {
@@ -48,20 +49,8 @@ function NuovaRiga({name, description, brand, price}){
 
 tab(); 
 
-//function cerca() {
-  //const select = document.getElementById("select")
-  //const input = document.getElementById("input")
 
- // const selectValue = select.value
- // const inputValue = input.value.toLowerCase()
 
-  //const userFilter = Totale.filter( user => {
-   //  return user[selectValue].toLowerCase().includes(inputValue)
 
-  //})
-  //renderUsers(userFilter)
-//}
-
-//user.name oppure user["name"] > primo caso non è dinamico, secondo caso dinamico
 
 

@@ -1,7 +1,7 @@
 nav {
   padding: 0;
   margin: 0;
-  width: 100%;
+  max-width: 100%;
 }
 nav .container-fluid img {
     width: 5rem; 
@@ -16,7 +16,7 @@ nav a {
 }
 body {
   background-image: url(close-up-honey-comb.jpg);
-  background-size: cover;
+  background-size:inherit; 
   }
 
 

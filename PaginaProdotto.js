@@ -2,17 +2,18 @@ const ProductBox = document.getElementById('ProductBox');
 
 const ProductEndpoint = "https://striveschool-api.herokuapp.com/api/product/";
 
-const query = window.location.search; 
-const params = new URLSearchParams(query); 
-const productId = params.get('q');
-
 function getProduct() {
-fetch(`${ProductEndpoint}${productId}`)
-.then(res => res.json())
-.then(products => {
-    console.log(products);
+    const query = window.location.search; 
+    const params = new URLSearchParams(query); 
+    const productId = params.get('q');
+
+fetch(`${ProductEndpoint}${productId}`, { 
+    headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JlMGUxNDFlMTQwNjAwMTUzMTRkNjkiLCJpYXQiOjE3NDA1MDg2OTIsImV4cCI6MTc0MTcxODI5Mn0.DpwITaKCU7rZ2Fv20-5UysSwfeXKtUy3JTj_pXqAMyA" }})
+    .then(res => res.json())
+    .then(products => {
     const CardMiele = createProductTemplate(products);
     ProductBox.appendChild(CardMiele);
+    CardMiele.render(Products); 
 })
 .catch((err) => console.log(err));
 }
@@ -20,35 +21,35 @@ fetch(`${ProductEndpoint}${productId}`)
 getProduct(); 
 
 function createProductTemplate({name, description, brand, imageUrl, price}){
-    const ProductCard = document.createElement("div")
-    ProductCard.classList.add('text-light', 'p-3', 'text-center'); 
 
-    const ProductImage = document.createElement("img")
-    ProductImage.classList.add("card-img-top", "mt-3")
-    CardImage.src = imageUrl;
+    const productCard = document.createElement('div');
+    productCard.classList.add('text-light', 'p-3', 'text-center');
 
-    const CardName = document.createElement("h3")
-    CardName.classList.add("card-title",)
-    CardName.innerText = name; 
+    const productImg = document.createElement('img');
+    productImg.src = imageUrl;
 
-    const CardDescription = document.createElement("p")
-    CardDescription.classList.add("card-text")
-    CardDescription.innerText = description;  
+    const productName = createMyH6(name);
 
-    const CardBrand = document.createElement("h5")
-    CardBrand.classList.add("card-text")
-    CardBrand.innerText = brand;  
+    const productDescription = createMyH6(description); 
 
-    const CardPrice = document.createElement("h5")
-    CardPrice.classList.add("card-text", "mb-4")
-    CardPrice.innerText = "€ " + price; 
+    const productBrand = createMyH6(`brand: ${brand}`);
 
-    ProductCard.append(ProductImage, CardName, CardDescription, CardBrand, CardPrice); 
+    const productPrice = createMyH6(`Prezzo: ${price}`);
 
-    return ProductCard; 
+   
+    productCard.append,(productImg, productName,productDescription, productBrand, productPrice)
+
+    return productCard;
 }
 
-getProduct(); 
+function createMyH6(text) {
+    const myH6 = document.createElement('h6');
+    myH6.classList.add('mt-2', 'mb-0');
+    myH6.innerText = text;
+
+    return myH6;
+}
+ 
 
 
 
