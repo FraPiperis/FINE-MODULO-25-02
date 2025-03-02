@@ -49,16 +49,22 @@
           </nav>
     </header>
     <main>
-        <div class="alert alert-warning d-none" role="alert" id="alertMessage">
-            <i class="fa-solid fa-circle-exclamation me-2"></i>
-            <span>Devi inserire tutti e 3 i campi obbligatori!</span>
+      <div class="input-group mx-1 my-4 row">
+        <div class="col-md-2">
+          <input type="text" id="post-name" class="form-control" aria-describedby="button-addon2" placeholder="Name">
         </div>
-      <div class="input-group mx-1 my-4">
-        <input type="text" id="post-name" class="form-control" aria-describedby="button-addon2" placeholder="Name">
-        <input type="text" id="post-description" class="form-control" aria-describedby="button-addon2" placeholder="Description">
-        <input type="text" id="post-brand" class="form-control" aria-describedby="button-addon2" placeholder="Brand">
-        <input type="text" id="post-price" class="form-control" aria-describedby="button-addon2" placeholder="Price">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="createPost()">Create Post</button>
+        <div class="col-md-2">
+          <input type="text" id="post-description" class="form-control" aria-describedby="button-addon2" placeholder="Description">
+        </div>
+        <div class="col-md-2">
+          <input type="text" id="post-brand" class="form-control" aria-describedby="button-addon2" placeholder="Brand">
+        </div>
+        <div class="col-md-2">
+          <input type="text" id="post-price" class="form-control" aria-describedby="button-addon2" placeholder="Price">
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="createPost()">Create Post</button>
+        </div> 
       </div>
 
         <table class="table table-bordered mt-5">
@@ -72,7 +78,7 @@
               </tr>
             </thead>
             <tbody id="riga">
-            
+          
             </tbody>
           </table>
     </main>
@@ -85,6 +91,6 @@
     crossorigin="anonymous"></script>
 
     <script src="Backoffice.js"></script>
-    <script src="Post.Edit.Delete.js"></script>
+    <script src="Create.js"></script>
 </body>
 </html>
