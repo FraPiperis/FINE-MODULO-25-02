@@ -49,24 +49,36 @@
           </nav>
     </header>
     <main>
-      <div class="input-group mx-1 my-4 row">
-        <div class="col-md-2">
-          <input type="text" id="post-name" class="form-control" aria-describedby="button-addon2" placeholder="Name">
+      <section>
+        <div class="alert alert-warning d-none" role="alert" id="failure">
+          You must fill all the fields!
         </div>
-        <div class="col-md-2">
-          <input type="text" id="post-description" class="form-control" aria-describedby="button-addon2" placeholder="Description">
-        </div>
-        <div class="col-md-2">
-          <input type="text" id="post-brand" class="form-control" aria-describedby="button-addon2" placeholder="Brand">
-        </div>
-        <div class="col-md-2">
-          <input type="text" id="post-price" class="form-control" aria-describedby="button-addon2" placeholder="Price">
-        </div>
-        <div class="col-md-2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="createPost()">Create Post</button>
-        </div> 
-      </div>
+        <div class="alert alert-success d-none" role="alert" id="success">
+          Product successfully added!
+        </div>      
 
+        <div class="input-group mx-1 my-4 row">
+          <div class="col-md-2">
+            <input type="text" id="post-image" class="form-control" aria-describedby="button-addon2" placeholder="Image">
+          </div>
+          <div class="col-md-2">
+            <input type="text" id="post-name" class="form-control" aria-describedby="button-addon2" placeholder="Name">
+          </div>
+          <div class="col-md-2">
+            <input type="text" id="post-description" class="form-control" aria-describedby="button-addon2" placeholder="Description">
+          </div>
+          <div class="col-md-2">
+            <input type="text" id="post-brand" class="form-control" aria-describedby="button-addon2" placeholder="Brand">
+          </div>
+          <div class="col-md-2">
+            <input type="text" id="post-price" class="form-control" aria-describedby="button-addon2" placeholder="Price">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="createProduct()">Create Product</button>
+          </div> 
+        </div>  
+      </section>
+      
         <table class="table table-bordered mt-5">
             <thead>
               <tr>
@@ -91,6 +103,5 @@
     crossorigin="anonymous"></script>
 
     <script src="Backoffice.js"></script>
-    <script src="Create.js"></script>
 </body>
 </html>
