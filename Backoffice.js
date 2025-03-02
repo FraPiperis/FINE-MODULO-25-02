@@ -35,21 +35,21 @@ async function tab() {
 }
 
 function NuovaRiga({name, description, brand, price, _id}){
-    const RigaUtente = document.createElement("tr", "table-dark")
+    const RigaUtente = document.createElement("tr", "table-dark", "col-md-2", "col-sm-4")
 
-     const NameUs = document.createElement("td","table-dark")
+     const NameUs = document.createElement("td","table-dark", "col-md-2", "col-sm-4")
      NameUs.innerText= name;
      RigaUtente.appendChild(NameUs); 
 
-     const descriptionUs = document.createElement("td", "table-dark")
+     const descriptionUs = document.createElement("td", "table-dark", "col-md-2", "col-sm-4")
      descriptionUs.innerText= description;
      RigaUtente.appendChild(descriptionUs); 
 
-     const brandUs = document.createElement("td", "table-dark")
+     const brandUs = document.createElement("td", "table-dark", "col-md-2","col-sm-4" )
      brandUs.innerText= brand; 
      RigaUtente.appendChild(brandUs); 
 
-     const priceUs = document.createElement("td", "table-dark")
+     const priceUs = document.createElement("td", "table-dark", "col-md-2", "col-sm-4")
      priceUs.innerText= price; 
      RigaUtente.appendChild(priceUs); 
 
