@@ -35,7 +35,7 @@ function getCurrentProduct() {
 
 function renderCurrentProduct({name, description, imageUrl, price}) {
     const card = document.createElement("div")
-    card.classList.add("card", "bg-transparent", "border-0")
+    card.classList.add("card", "bg-transparent", "border-0", "mb-5")
 
     const cardImg = document.createElement("img")
     cardImg.classList.add("img-fluid", "img-thumbnail")
@@ -111,5 +111,5 @@ function editProduct() {
 getCurrentProduct()
 
 returnBtn.addEventListener("click", () => {
-    window.location.href = `backOffice.html`
+    window.location.href = `backoffice.html`
 })
